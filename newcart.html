@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML File Merger</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            height: 100%;
+        }
+        .left-panel {
+            flex: 0 0 60%;
+            background-color: #f0f0f0; /* Just for visualization */
+            overflow: auto;
+        }
+        .right-panel {
+            flex: 0 0 40%;
+            background-color: #e0e0e0; /* Just for visualization */
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel" id="leftPanel">
+            
+        </div>
+        <div class="right-panel" id="rightPanel"></div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            // Function to merge two HTML files
+            function mergeHTMLFiles(file1, file2) {
+                // Fetch contents of first HTML file
+                $.get(file1, function(html1) {
+                    // Set contents of first file to left panel
+                    $('#leftPanel').html(html1);
+                });
+                
+                // Fetch contents of second HTML file
+                $.get(file2, function(html2) {
+                    // Set contents of second file to right panel
+                    $('#rightPanel').html(html2);
+                });
+            }
+
+            // Merge two HTML files
+            mergeHTMLFiles('checkout.html', 'ex.html');
+        });
+    </script>
+</body>
+</html>

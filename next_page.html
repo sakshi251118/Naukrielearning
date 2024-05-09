@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order form Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #999; /* Changed font color */
+        }
+
+        h2 {
+            text-align: center;
+            color: #333333;
+        }
+
+        #formDataContainer {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            margin: 0 0 10px;
+            color: #555;
+        }
+
+        strong {
+            color: #333;
+        }
+    </style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Order Form</title>
+        <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
+    
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,426;1,426&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #0679bc31;
+                margin: 0;
+                padding: 0;
+            }
+    
+            h1 {
+               
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+            
+    
+            .order-form {
+                max-width: 600px;
+                margin: 20px auto;
+                padding: 20px;
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            .order-form label {
+                font-weight: bold;
+            }
+    
+            .order-form input[type="text"],
+            .order-form input[type="email"],
+            .order-form input[type="tel"],
+            .order-form select,
+            .order-form input[type="date"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+    
+            .order-form select {
+                height: 38px;
+            }
+    
+            .slots {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 5px;
+            }
+    
+            .slots label {
+                display: inline-block;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+    
+            .slots label:hover:not(.clicked) {
+                background-color: #ffa500;
+                /* Orange color on hover */
+            }
+    
+            .slots input[type="radio"] {
+                display: none;
+            }
+    
+            .slots input[type="radio"]:checked+label {
+                background-color: orange;
+                /* Orange color on click */
+                color: white;
+            }
+    
+            .submit-btn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+    
+            .submit-btn:hover {
+                background-color: #45a049;
+            }
+    
+            .footer-logo-box {
+                background-color: #f4f4f4;
+                padding: 20px;
+                text-align: center;
+            }
+    
+            .footer-logo-box img {
+                max-width: 200px;
+                /* Adjust as needed */
+                max-height: 150px;
+                /* Adjust as needed */
+                margin: 10px;
+                /* Adjust as needed */
+            }
+        </style>
+</head>
+<body>
+    <!-- Form data content -->
+    <h2>Checkout Form</h2>
+
+    <div id="formDataContainer">
+        <!-- Form data will be displayed here -->
+        
+    </div>
+    <div id="formDataContainer" >
+        <button type="button" class="submit-btn" onclick="submitForm()"
+        style="text-transform: none; text-decoration: none; color: white;"
+        >Pay Now</button>
+        
+    </div>
+    
+    <script>
+        // Function to parse URL parameters
+        function getUrlParams() {
+            var params = {};
+            var paramString = window.location.search.substring(1);
+            var paramPairs = paramString.split("&");
+    
+            for (var i = 0; i < paramPairs.length; i++) {
+                var pair = paramPairs[i].split("=");
+                var key = decodeURIComponent(pair[0]);
+                var value = decodeURIComponent(pair[1]).replace(/\+/g, '_'); // Replace + with _
+                params[key] = value;
+            }
+    
+            return params;
+        }
+         //Function to submit form
+        function submitForm(){
+             // Redirect to the next page with form data in URL parameters
+        window.location.href = "payment.html";
+
+        }
+        // Function to display form data
+        function displayFormData() {
+            var formData = getUrlParams();
+    
+            var formDataContainer = document.getElementById("formDataContainer");
+            var html = "";
+    
+            for (var key in formData) {
+                html += "<p><strong>" + key + ":</strong> " + formData[key] + "</p>";
+            }
+    
+            formDataContainer.innerHTML = html;
+        }
+    
+        // Call displayFormData function when the page loads
+        window.onload = displayFormData;
+    </script>
+    
+   
+</body>
+</html>

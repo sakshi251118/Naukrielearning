@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Course Details</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Unicat project">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+	<link rel="stylesheet" type="text/css" href="styles/course.css">
+	<link rel="stylesheet" type="text/css" href="styles/course_responsive.css">
+<style>
+	#nav-cart {
+            position: relative;
+        }
+
+        #nav-cart::after {
+            content: attr(data-cart-count);
+            /* Set content to the value of the data-count attribute */
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: red;
+            border: 2px solid white;
+            color: white;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+</style>
+</head>
+
+<body>
+
+	<div class="super_container">
+
+		<!-- Header -->
+
+		<header class="header">
+
+
+
+			<!-- Header Content -->
+			<header class="container-fluid">
+				<nav class="navbar navbar-expand-sm navbar-light bg-light me-auto">
+					<div class="container">
+						<a class="navbar-brand" href="#"><img src="https://www.naukriedu.org/Asset/logo-n-1.png"
+								alt=""></a>
+						<button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+							data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="collapsibleNavId">
+							<ul class="navbar-nav  mt-2 mt-lg-0">
+
+
+								<li class="nav-item">
+									<a class="nav-link" href="/index.html">Home
+										</a>
+								</li>
+								<li class="nav-item dropdown"> <!-- Added dropdown class to the list item -->
+                                    <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Services
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="servicesDropdown"> <!-- Dropdown menu content -->
+                                        <a class="dropdown-item" href="/resume.html">Resume Review and Optimization</a>
+                                        <a class="dropdown-item" href="/interview.html">Interview Preparation</a>
+                                        <a class="dropdown-item" href="/career.html">Career Counseling</a>
+                                        <a class="dropdown-item" href="/jobsearch.html">Job Search Assistance</a>
+                                        <a class="dropdown-item" href="/skillsdev.html">Skills Development</a>                                
+                                    </div>
+                                </li>
+		
+								<li class="nav-item">
+									<a class="nav-link" href="/proffesionalcertiicates.html">Professional Certifications
+										</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/term.html">Terms and Conditions</a>
+								</li>
+								
+								<li class="nav-item">
+									<a class="nav-link" href="/sample.html">Sample GST Invoice</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/samplecertificates.html">Sample Professional Certificates</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/contact.html">Contact us</a>
+								</li>
+								
+		
+								<li class="nav-item" id="nav-cart" data-cart-count="0">
+									<a class="nav-link" href="/checkout.html">Cart</a>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+				</nav>
+			</header>
+
+			<!-- Header Search Panel -->
+			<div class="header_search_container">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="header_search_content d-flex flex-row align-items-center justify-content-end">
+								<form action="#" class="header_search_form">
+									<input type="search" class="search_input" placeholder="Search" required="required">
+									<button
+										class="header_search_button d-flex flex-column align-items-center justify-content-center">
+										<i class="fa fa-search" aria-hidden="true"></i>
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Menu -->
+
+		<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+			<div class="menu_close_container">
+				<div class="menu_close">
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div class="search">
+				<form action="#" class="header_search_form menu_mm">
+					<input type="search" class="search_input menu_mm" placeholder="Search" required="required">
+					<button
+						class="header_search_button d-flex flex-column align-items-center justify-content-center menu_mm">
+						<i class="fa fa-search menu_mm" aria-hidden="true"></i>
+					</button>
+				</form>
+			</div>
+			<nav class="menu_nav">
+				<ul class="menu_mm">
+					<li class="menu_mm"><a href="/index.html">Home</a></li>
+					<li class="menu_mm"><a href="#">About</a></li>
+					<li class="menu_mm"><a href="#">Courses</a></li>
+					<li class="menu_mm"><a href="#">Blog</a></li>
+					<li class="menu_mm"><a href="#">Page</a></li>
+					<li class="menu_mm"><a href="/contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<!-- Home -->
+
+
+
+		<!-- Course -->
+
+		<div class="course">
+			<div class="container">
+				<div class="row">
+
+					<!-- Course -->
+					<div class="col-lg-8">
+
+						<div class="course_container">
+							<div class="course_title">ASME B31.3 Process Piping Code Certification</div>
+							<div
+								class="course_info d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
+
+								<!-- Course Info Item -->
+
+
+							
+
+								<!-- Course Info Item -->
+								<div class="course_info_item">
+									<div class="course_info_title">Categories:</div>
+									<div class="course_info_text"><a href="#">Language: English</a></div>
+								</div>
+
+							</div>
+
+							<!-- Course Image -->
+							<div class="course_image"><img src="images/ASME B31.3 Process Piping Code Certification.jpeg" alt=""></div>
+
+							<!-- Course Tabs -->
+							<div class="course_tabs_container">
+								<div class="tabs d-flex flex-row align-items-center justify-content-start">
+									<div class="tab active">description</div>
+									<!-- <div class="tab">curriculum</div> -->
+								</div>
+								<div class="tab_panels">
+
+									<!-- Description -->
+									<div class="tab_panel active">
+										<div class="tab_panel_title">ASME B31.3 Process Piping Code Certification</div>
+										<div class="tab_panel_content">
+											<div class="tab_panel_text">
+												<p>ASME B31.3 Process Piping Code Certification signifies adherence to
+													the American Society of Mechanical Engineers (ASME) standards
+													governing the design, fabrication, inspection, testing, and
+													maintenance of piping systems utilized in industrial processes. This
+													certification confirms that individuals or entities possess the
+													requisite knowledge and competencies to ensure the safe and
+													efficient operation of process piping systems across various sectors
+													such as chemical, petroleum, pharmaceutical, and food processing.
+													Compliance with ASME B31.3 entails meticulous attention to design
+													criteria, material selection, fabrication, construction, inspection,
+													and testing procedures. It emphasizes safety considerations,
+													including the mitigation of pressure hazards, material compatibility
+													issues, and environmental risks associated with process piping
+													systems. Moreover, the certification underscores the significance of
+													maintenance and repair practices in extending the service life of
+													piping systems while minimizing the potential for failures or leaks.
+													Overall, ASME B31.3 certification plays a pivotal role in upholding
+													safety, reliability, and operational excellence within process
+													industries by ensuring adherence to established standards and best
+													practices in process piping design and operation.</p>
+											</div>
+											
+										
+											
+										</div>
+									</div>
+
+									<!-- Curriculum -->
+									<div class="tab_panel tab_panel_2">
+										<div class="tab_panel_content">
+											<div class="tab_panel_title">Software Training</div>
+											<div class="tab_panel_content">
+												<div class="tab_panel_text">
+													<p>Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean
+														sollicitudin, lorem quis bibendum auci elit consequat ipsutis
+														sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a
+														sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a
+														odio tincidunt auctor a ornare odio.</p>
+												</div>
+
+												<!-- Dropdowns -->
+												<ul class="dropdowns">
+													<li class="has_children">
+														<div class="dropdown_item">
+															<div class="dropdown_item_title"><span>Lecture 1:</span>
+																Lorem Ipsn gravida nibh vel velit auctor aliquet.</div>
+															<div class="dropdown_item_text">
+																<p>Lorem Ipsn gravida nibh vel velit auctor aliquet.
+																	Aenean sollicitudin, lorem quis bibendum auci elit
+																	consequat ipsutis sem nibh id elit. Duis sed odio
+																	sit amet nibh vulputate cursus.</p>
+															</div>
+														</div>
+														<ul>
+															<li>
+																<div class="dropdown_item">
+																	<div class="dropdown_item_title"><span>Lecture
+																			1.1:</span> Lorem Ipsn gravida nibh vel
+																		velit auctor aliquet.</div>
+																	<div class="dropdown_item_text">
+																		<p>Lorem Ipsn gravida nibh vel velit auctor
+																			aliquet. Aenean sollicitudin, lorem quis
+																			bibendum auci elit consequat ipsutis sem
+																			nibh id elit. Duis sed odio sit amet nibh
+																			vulputate cursus.</p>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<div class="dropdown_item">
+																	<div class="dropdown_item_title"><span>Lecture
+																			1.2:</span> Lorem Ipsn gravida nibh vel
+																		velit auctor aliquet.</div>
+																	<div class="dropdown_item_text">
+																		<p>Lorem Ipsn gravida nibh vel velit auctor
+																			aliquet. Aenean sollicitudin, lorem quis
+																			bibendum auci elit consequat ipsutis sem
+																			nibh id elit. Duis sed odio sit amet nibh
+																			vulputate cursus.</p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+													<li class="has_children">
+														<div class="dropdown_item">
+															<div class="dropdown_item_title"><span>Lecture 2:</span>
+																Lorem Ipsn gravida nibh vel velit auctor aliquet.</div>
+															<div class="dropdown_item_text">
+																<p>Lorem Ipsn gravida nibh vel velit auctor aliquet.
+																	Aenean sollicitudin, lorem quis bibendum auci elit
+																	consequat ipsutis sem nibh id elit. Duis sed odio
+																	sit amet nibh vulputate cursus.</p>
+															</div>
+														</div>
+														<ul>
+															<li>
+																<div class="dropdown_item">
+																	<div class="dropdown_item_title"><span>Lecture
+																			2.1:</span> Lorem Ipsn gravida nibh vel
+																		velit auctor aliquet.</div>
+																	<div class="dropdown_item_text">
+																		<p>Lorem Ipsn gravida nibh vel velit auctor
+																			aliquet. Aenean sollicitudin, lorem quis
+																			bibendum auci elit consequat ipsutis sem
+																			nibh id elit. Duis sed odio sit amet nibh
+																			vulputate cursus.</p>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<div class="dropdown_item">
+																	<div class="dropdown_item_title"><span>Lecture
+																			2.2:</span> Lorem Ipsn gravida nibh vel
+																		velit auctor aliquet.</div>
+																	<div class="dropdown_item_text">
+																		<p>Lorem Ipsn gravida nibh vel velit auctor
+																			aliquet. Aenean sollicitudin, lorem quis
+																			bibendum auci elit consequat ipsutis sem
+																			nibh id elit. Duis sed odio sit amet nibh
+																			vulputate cursus.</p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+													<li>
+														<div class="dropdown_item">
+															<div class="dropdown_item_title"><span>Lecture 3:</span>
+																Lorem Ipsn gravida nibh vel velit auctor aliquet.</div>
+															<div class="dropdown_item_text">
+																<p>Lorem Ipsn gravida nibh vel velit auctor aliquet.
+																	Aenean sollicitudin, lorem quis bibendum auci elit
+																	consequat ipsutis sem nibh id elit. Duis sed odio
+																	sit amet nibh vulputate cursus.</p>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="dropdown_item">
+															<div class="dropdown_item_title"><span>Lecture 4:</span>
+																Lorem Ipsn gravida nibh vel velit auctor aliquet.</div>
+															<div class="dropdown_item_text">
+																<p>Lorem Ipsn gravida nibh vel velit auctor aliquet.
+																	Aenean sollicitudin, lorem quis bibendum auci elit
+																	consequat ipsutis sem nibh id elit. Duis sed odio
+																	sit amet nibh vulputate cursus.</p>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="dropdown_item">
+															<div class="dropdown_item_title"><span>Lecture 5:</span>
+																Lorem Ipsn gravida nibh vel velit auctor aliquet.</div>
+															<div class="dropdown_item_text">
+																<p>Lorem Ipsn gravida nibh vel velit auctor aliquet.
+																	Aenean sollicitudin, lorem quis bibendum auci elit
+																	consequat ipsutis sem nibh id elit. Duis sed odio
+																	sit amet nibh vulputate cursus.</p>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+									<!-- Reviews -->
+									<div class="tab_panel tab_panel_3">
+										<div class="tab_panel_title">Course Review</div>
+
+										<!-- Rating -->
+										<div class="review_rating_container">
+											<div class="review_rating">
+												<div class="review_rating_num">4.5</div>
+												<div class="review_rating_stars">
+													<div class="rating_r rating_r_4"><i></i><i></i><i></i><i></i><i></i>
+													</div>
+												</div>
+												<div class="review_rating_text">(28 Ratings)</div>
+											</div>
+											<div class="review_rating_bars">
+												<ul>
+													<li><span>5 Star</span>
+														<div class="review_rating_bar">
+															<div style="width:90%;"></div>
+														</div>
+													</li>
+													<li><span>4 Star</span>
+														<div class="review_rating_bar">
+															<div style="width:75%;"></div>
+														</div>
+													</li>
+													<li><span>3 Star</span>
+														<div class="review_rating_bar">
+															<div style="width:32%;"></div>
+														</div>
+													</li>
+													<li><span>2 Star</span>
+														<div class="review_rating_bar">
+															<div style="width:10%;"></div>
+														</div>
+													</li>
+													<li><span>1 Star</span>
+														<div class="review_rating_bar">
+															<div style="width:3%;"></div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Comments -->
+										<div class="comments_container">
+											<ul class="comments_list">
+												<li>
+													<div
+														class="comment_item d-flex flex-row align-items-start jutify-content-start">
+														<div class="comment_image">
+															<div><img src="images/comment_1.jpg" alt=""></div>
+														</div>
+														<div class="comment_content">
+															<div
+																class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+																<div class="comment_author"><a href="#">Milley Cyrus</a>
+																</div>
+																<div class="comment_rating">
+																	<div class="rating_r rating_r_4">
+																		<i></i><i></i><i></i><i></i><i></i>
+																	</div>
+																</div>
+																<div class="comment_time ml-auto">1 day ago</div>
+															</div>
+															<div class="comment_text">
+																<p>There are many variations of passages of Lorem Ipsum
+																	available, but the majority have alteration in some
+																	form, by injected humour.</p>
+															</div>
+															<div
+																class="comment_extras d-flex flex-row align-items-center justify-content-start">
+																<div class="comment_extra comment_likes"><a href="#"><i
+																			class="fa fa-heart"
+																			aria-hidden="true"></i><span>15</span></a>
+																</div>
+																<div class="comment_extra comment_reply"><a href="#"><i
+																			class="fa fa-reply"
+																			aria-hidden="true"></i><span>Reply</span></a>
+																</div>
+															</div>
+														</div>
+													</div>
+													<ul>
+														<li>
+															<div
+																class="comment_item d-flex flex-row align-items-start jutify-content-start">
+																<div class="comment_image">
+																	<div><img src="images/comment_2.jpg" alt=""></div>
+																</div>
+																<div class="comment_content">
+																	<div
+																		class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+																		<div class="comment_author"><a href="#">John
+																				Tyler</a></div>
+																		<div class="comment_rating">
+																			<div class="rating_r rating_r_4">
+																				<i></i><i></i><i></i><i></i><i></i>
+																			</div>
+																		</div>
+																		<div class="comment_time ml-auto">1 day ago
+																		</div>
+																	</div>
+																	<div class="comment_text">
+																		<p>There are many variations of passages of
+																			Lorem Ipsum available, but the majority have
+																			alteration in some form, by injected humour.
+																		</p>
+																	</div>
+																	<div
+																		class="comment_extras d-flex flex-row align-items-center justify-content-start">
+																		<div class="comment_extra comment_likes"><a
+																				href="#"><i class="fa fa-heart"
+																					aria-hidden="true"></i><span>15</span></a>
+																		</div>
+																		<div class="comment_extra comment_reply"><a
+																				href="#"><i class="fa fa-reply"
+																					aria-hidden="true"></i><span>Reply</span></a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<div
+														class="comment_item d-flex flex-row align-items-start jutify-content-start">
+														<div class="comment_image">
+															<div><img src="images/comment_3.jpg" alt=""></div>
+														</div>
+														<div class="comment_content">
+															<div
+																class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+																<div class="comment_author"><a href="#">Milley Cyrus</a>
+																</div>
+																<div class="comment_rating">
+																	<div class="rating_r rating_r_4">
+																		<i></i><i></i><i></i><i></i><i></i>
+																	</div>
+																</div>
+																<div class="comment_time ml-auto">1 day ago</div>
+															</div>
+															<div class="comment_text">
+																<p>There are many variations of passages of Lorem Ipsum
+																	available, but the majority have alteration in some
+																	form, by injected humour.</p>
+															</div>
+															<div
+																class="comment_extras d-flex flex-row align-items-center justify-content-start">
+																<div class="comment_extra comment_likes"><a href="#"><i
+																			class="fa fa-heart"
+																			aria-hidden="true"></i><span>15</span></a>
+																</div>
+																<div class="comment_extra comment_reply"><a href="#"><i
+																			class="fa fa-reply"
+																			aria-hidden="true"></i><span>Reply</span></a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+											<div class="add_comment_container">
+												<div class="add_comment_title">Add a review</div>
+												<div class="add_comment_text">You must be <a href="#">logged</a> in to
+													post a comment.</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Course Sidebar -->
+					<div class="col-lg-4">
+						<div class="sidebar">
+
+							  <!-- Feature -->
+							  <div class="sidebar_section">
+                                
+                                <div class="sidebar_feature">
+                                    <div class="course_price"><button onclick='toggleCart()' id="addToCart"  class="btn btn-primary">Add to Cart</button></div>
+
+                                    <!-- Features -->
+                                    
+                                </div>
+                            </div>
+
+							
+
+
+
+							<!-- Latest Course -->
+                            <div class="sidebar_section">
+                                <div class="sidebar_section_title">Our Top Selling Courses</div>
+                                <div class="sidebar_latest">
+
+                                    <!-- Latest Course -->
+                                    <div class="latest d-flex flex-row align-items-start justify-content-start">
+                                        <div class="latest_image">
+                                            <div><img
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Quality_Engineering.jpg/440px-Quality_Engineering.jpg"
+                                                    alt=""></div>
+                                        </div>
+                                        <div class="latest_content">
+                                            <div class="latest_title"><a href="course.html">Certified Quality Engineer
+                                                    (CQE)</a></div>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <!-- Latest Course -->
+                                    <div class="latest d-flex flex-row align-items-start justify-content-start">
+                                        <div class="latest_image">
+                                            <div><img
+                                                    src="https://eco-cdn.iqpc.com/eco/images/channel_content/images/sigma_green_belt.png"
+                                                    alt=""></div>
+                                        </div>
+                                        <div class="latest_content">
+                                            <div class="latest_title"><a href="course.html">Six Sigma Green Belt</a>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+
+                                    <!-- Latest Course -->
+                                    <div class="latest d-flex flex-row align-items-start justify-content-start">
+                                        <div class="latest_image">
+                                            <div><img
+                                                    src="https://www.feedough.com/wp-content/uploads/2021/09/project-manager-1024x576.webp"
+                                                    alt=""></div>
+                                        </div>
+                                        <div class="latest_content">
+                                            <div class="latest_title"><a href="course.html">MPM Certification</a></div>
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		
+		<!-- Newsletter -->
+		
+		
+
+
+		<!-- Footer -->
+
+		<footer id="footer">
+			<section class="container-fluid pb-5" id="footer-bg">
+				<div class="container">
+					<div class="row pt-5 ">
+						<div class="col-12 col-xl-3">
+							<p>
+								Naukri learning
+							</p>
+							<p>
+								Naukri Learning is an online platform that offers a wide range of professional courses
+								to
+								help individuals enhance their skills and stay competitive in the job market. </p>
+						</div>
+
+						<div class="col-12 col-xl-3">
+							<p>Quick link</p>
+							<ul id="f-col-a">
+								<li><a href="/contact.html">Contact</a></li>
+								<li><a href="/samplecertificates.html">Sample Certificates</a></li>
+								<li><a href="">Privacy Policy</a></li>
+								<li><a href="">Refund Policy</a></li>
+
+							</ul>
+						</div>
+
+						<div class="col-12 col-xl-3">
+							<p>Reach Us</p>
+							<i class="fa-solid fa-house fa-lg"></i>
+							<p class="">
+							<p>Address :- Info Edge (India) Ltd 203, 2nd Floor, <br>North Block, Manipal Center, Front
+								Wing,
+								Dickenson Road, <br> Bengaluru,<br> Karnataka 560042</p>
+
+							</p>
+						</div>
+
+						<div class="col-12 col-xl-3 " id="f-col-a">
+							<p>Contact Us</p>
+
+							<a href=""><i class="fa-solid fa-phone fa-lg pe-4"></i>08069790241</a>
+							<br>
+							<a href=""> <i class="fa-solid fa-envelope fa-lg pe-4"></i> contact@naukriedu.org</a>
+						</div>
+
+
+					</div>
+				</div>
+	</div>
+	</section>
+	</footer>
+
+	<footer class="container-fluid pt-4 bg-dark">
+		<div class="container">
+			<div class="row  ">
+				<div class="col-12 col-xl-12">
+					<p class="text-white text-center">© Copyrights 2023 @Naukri</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	</div>
+<script src="./js/cart.js">
+</script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="styles/bootstrap4/popper.js"></script>
+	<script src="styles/bootstrap4/bootstrap.min.js"></script>
+	<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+	<script src="plugins/easing/easing.js"></script>
+	<script src="plugins/parallax-js-master/parallax.min.js"></script>
+	<script src="plugins/colorbox/jquery.colorbox-min.js"></script>
+	<script src="js/course.js"></script>
+</body>
+
+</html>
